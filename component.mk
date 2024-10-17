@@ -1,11 +1,7 @@
-# Edit following two lines to set component requirements (see docs)
-SRCDIRS := freertos-addons-master/c/Source 
-SRCDIRS += freertos-addons-master/c++/Source 
 
-INCLDIRS := freertos-addons-master/c/Source/include 
-INCLDIRS += freertos-addons-master/c++/Source/include
-INCLDIRS += freertos-addons-master
+COMPONENT_ADD_INCLUDEDIRS := freertos-addons-master
+COMPONENT_ADD_INCLUDEDIRS += freertos-addons-master/c++/Source/include
 
-COMPONENT_ADD_INCLUDEDIRS := $(INCLDIRS)
+COMPONENT_SRCDIRS := freertos-addons-master/c++/Source
 
-COMPONENT_SRCDIRS := $(SRCDIRS)
+COMPONENT_OBJEXCLUDE := freertos-addons-master/c++/Source/ctickhook.o
